@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    data = None
     if request.method == 'POST':
-        data = None
         city = request.form['cityName']
         state = request.form['stateName']
         country = request.form['countryName']
